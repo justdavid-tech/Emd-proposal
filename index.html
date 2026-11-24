@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EMD&amp;C Global Limited | Website Proposal</title>
+<meta name="description" content="A custom website proposal for EMD&amp;C Global Limited, covering car sales, real estate and power appliances, with pricing, features and a dashboard for each business.">
+<meta name="author" content="Justdavidtech">
+<meta name="theme-color" content="#d94f38">
+<link rel="canonical" href="https://emd-proposal.vercel.app/">
+
+<!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EMD&amp;C Global Limited">
+<meta property="og:title" content="EMD&amp;C Global Limited | Website Proposal">
+<meta property="og:description" content="Cars, homes and power under one trusted name online. See the proposed website, packages and pricing.">
+<meta property="og:url" content="https://emd-proposal.vercel.app/">
+<meta property="og:image" content="https://emd-proposal.vercel.app/logo-dark">
+<meta property="og:image:alt" content="EMD&amp;C Global Limited logo">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_NG">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="EMD&amp;C Global Limited | Website Proposal">
+<meta name="twitter:description" content="Cars, homes and power under one trusted name online. See the proposed website, packages and pricing.">
+<meta name="twitter:image" content="https://emd-proposal.vercel.app/logo-dark">
+<meta name="twitter:image:alt" content="EMD&amp;C Global Limited logo">
+
+<!-- Icons -->
+<link rel="icon" href="/logo-dark.jpg">
+<link rel="apple-touch-icon" href="/logo-dark.jpg">
+<link rel="canonical" href="https://emdc-global-proposal.vercel.app/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#f4f7f7;--ink:#1e2b33;--mute:#5d6c75;--sea:#2e5c61;--line:#dbe3e5;--car:#dde7f3;--home:#dfeee2;--pow:#f6ecce;--white:#fff;
+--d:'Bricolage Grotesque',Georgia,serif;--b:'Figtree',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:var(--b);background:var(--bg);color:var(--ink);line-height:1.65;font-size:17px}
+h1,h2,h3{font-family:var(--d);line-height:1.1;letter-spacing:-.02em}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+/* loader */
+#loader{position:fixed;inset:0;background:var(--ink);color:#fff;display:grid;place-items:center;z-index:99;transition:opacity .7s,visibility .7s}
+#loader.done{opacity:0;visibility:hidden}
+.ld{text-align:center}.ld b{font-family:var(--d);font-size:clamp(2.4rem,8vw,4rem);letter-spacing:-.03em;display:block}
+.ld small{color:#9db3b8;display:block;margin:6px 0 26px}
+.bar{width:220px;height:3px;background:#34454e;border-radius:3px;margin:auto;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:#a9cfc9;animation:fill 1.8s ease forwards}
+.tiles{display:flex;gap:8px;justify-content:center;margin-bottom:22px}
+.tiles span{width:34px;height:34px;border-radius:10px;animation:bob 1.2s ease-in-out infinite}
+.tiles span:nth-child(1){background:var(--car)}.tiles span:nth-child(2){background:var(--home);animation-delay:.15s}.tiles span:nth-child(3){background:var(--pow);animation-delay:.3s}
+@keyframes fill{to{width:100%}}@keyframes bob{50%{transform:translateY(-9px)}}
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(244,247,247,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:62px}
+.logo{font-family:var(--d);font-weight:700;font-size:1.15rem;text-decoration:none}
+nav a.cta{background:var(--ink);color:#fff;text-decoration:none;padding:9px 18px;border-radius:99px;font-size:.92rem}
+/* hero */
+.hero{padding:72px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.kicker{color:var(--sea);font-weight:600;margin-bottom:18px}
+.hero h1{font-size:clamp(2.5rem,5.6vw,4.4rem);margin-bottom:22px}
+.hero p.lead{color:var(--mute);font-size:1.12rem;max-width:34em}
+.meta{display:flex;flex-wrap:wrap;gap:28px;margin-top:34px;font-size:.95rem;color:var(--mute)}
+.meta b{display:block;color:var(--ink);font-weight:600}
+.stack{position:relative;height:380px}
+.stack div{position:absolute;width:74%;padding:26px;border-radius:26px;box-shadow:0 18px 40px -22px rgba(30,43,51,.35)}
+.stack h3{font-size:1.5rem;margin-bottom:6px}.stack p{font-size:.93rem;color:#44545c}
+.s1{background:var(--car);top:0;left:0;transform:rotate(-3deg)}
+.s2{background:var(--home);top:120px;right:0;transform:rotate(2deg);border-radius:26px 26px 60px 26px!important}
+.s3{background:var(--pow);top:244px;left:6%;transform:rotate(-1.5deg);border-radius:60px 26px 26px 26px!important}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:54px}
+.facts div{border-top:2px solid var(--ink);padding-top:12px}
+.facts b{font-family:var(--d);font-size:2.2rem;display:block}.facts span{color:var(--mute);font-size:.95rem}
+/* sections */
+section{padding:84px 0}
+section.alt{background:var(--white)}
+.head{display:flex;gap:20px;align-items:baseline;margin-bottom:12px}
+.num{font-family:var(--d);color:var(--sea);font-size:1.1rem;font-weight:700;min-width:2ch}
+h2{font-size:clamp(2rem,4vw,3rem)}
+.sub{color:var(--mute);max-width:44em;margin:0 0 40px 52px}
+.grid{display:grid;gap:18px}.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--bg);border-radius:20px;padding:26px}
+section.alt .card{background:var(--bg)}section:not(.alt) .card{background:var(--white)}
+.card h3{font-size:1.25rem;margin-bottom:8px}.card p{color:var(--mute);font-size:.98rem}
+.note{margin-top:22px;padding:22px 26px;border-radius:20px;background:var(--ink);color:#e9f0f1}
+.note b{font-family:var(--d);font-size:1.2rem;display:block;margin-bottom:4px}
+/* contents */
+.toc{columns:2;column-gap:40px;list-style:none;max-width:760px}
+.toc li{break-inside:avoid;border-bottom:1px solid var(--line);padding:13px 0}
+.toc a{text-decoration:none;display:flex;gap:16px}.toc a:hover{color:var(--sea)}
+.toc span{color:var(--sea);font-family:var(--d);font-weight:700}
+/* tints */
+.t-car{background:var(--car)!important}.t-home{background:var(--home)!important}.t-pow{background:var(--pow)!important}
+ul.tick{list-style:none;margin-top:12px}
+ul.tick li{padding:5px 0 5px 26px;position:relative;font-size:.96rem;color:#33444d}
+ul.tick li::before{content:"";position:absolute;left:2px;top:13px;width:11px;height:6px;border-left:2px solid var(--sea);border-bottom:2px solid var(--sea);transform:rotate(-45deg)}
+/* tabs */
+.tabs{display:flex;gap:10px;margin-bottom:18px;flex-wrap:wrap}
+.tabs button{font:inherit;border:1px solid var(--line);background:var(--white);padding:10px 20px;border-radius:99px;cursor:pointer;transition:.2s}
+.tabs button[aria-selected=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.panel{display:none;border-radius:26px;padding:34px}.panel.on{display:block;animation:in .4s ease}
+.panel .cols{display:grid;grid-template-columns:repeat(2,1fr);gap:0 40px}
+@keyframes in{from{opacity:0;transform:translateY(8px)}}
+/* pricing */
+.price{font-family:var(--d);font-size:2.2rem;margin:10px 0 2px}
+.price small{font-family:var(--b);font-size:.9rem;color:var(--mute);display:block;font-weight:400}
+.tag{display:inline-block;background:var(--ink);color:#fff;font-size:.8rem;padding:3px 12px;border-radius:99px;margin-bottom:8px}
+.sep{height:1px;background:var(--line);margin:14px 0}
+.biz{border-radius:26px;padding:30px;display:flex;flex-direction:column}
+.biz h3{font-size:1.6rem}.biz .price{font-size:2.6rem}
+.biz h4{font-family:var(--d);margin-top:20px;font-size:1.05rem}
+.total{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center;margin-top:20px;padding:24px 30px;border-radius:22px;border:1.5px dashed var(--sea)}
+.total b{font-family:var(--d);font-size:1.7rem}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.steps .card{counter-increment:s}.steps .card::before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;font-family:var(--d);margin-bottom:14px}
+.close{background:var(--ink);color:#fff;border-radius:34px;padding:56px 48px;text-align:center}
+.close p{color:#b9c8cc;max-width:36em;margin:16px auto 28px}
+.btn{display:inline-block;background:#fff;color:var(--ink);text-decoration:none;padding:14px 28px;border-radius:99px;font-weight:600}
+.contact{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;margin-top:30px;color:#b9c8cc;font-size:.95rem}
+.contact b{display:block;color:#fff;font-weight:500}
+footer{padding:28px 0;color:var(--mute);font-size:.9rem;text-align:center}
+/* whatsapp */
+.wa{position:fixed;right:22px;bottom:22px;z-index:60;display:flex;align-items:center;gap:10px;background:#3da368;color:#fff;text-decoration:none;padding:13px 20px 13px 15px;border-radius:99px;box-shadow:0 12px 28px -10px rgba(30,70,45,.55);font-weight:600;font-size:.95rem;transition:transform .2s}
+.wa:hover{transform:translateY(-3px)}.wa svg{width:26px;height:26px;fill:#fff}
+.rv{opacity:0;transform:translateY(16px);transition:.7s}.rv.in{opacity:1;transform:none}
+:focus-visible{outline:3px solid var(--sea);outline-offset:3px}
+@media(max-width:900px){.hero .wrap,.g2,.g3,.g4,.steps,.panel .cols{grid-template-columns:1fr}.stack{height:360px}.sub{margin-left:0}.toc{columns:1}.close{padding:40px 24px}.wa span{display:none}.wa{padding:14px}}
+@media print{#loader,.wa,nav{display:none}.rv{opacity:1;transform:none}.panel{display:block!important;break-inside:avoid}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+
+/* palette: tomato, espresso, cream, blush */
+:root{--bg:#fbf4ee;--ink:#2b1f1c;--mute:#74605a;--sea:#d94f38;--line:#eddccf;--tom:#d94f38;--deep:#2b1f1c;--blush:#ffdccf;--car:#fbe2d8;--home:#f5e7d4;--pow:#f1d1c2}
+body{background:var(--bg);color:var(--ink)}
+#loader{background:var(--deep)}.bar{background:#4a3a35}.bar i{background:var(--tom)}.ld small{color:#d9c7bf}
+.tiles span:nth-child(1){background:var(--blush)}.tiles span:nth-child(2){background:var(--tom)}.tiles span:nth-child(3){background:#f5e7d4}
+nav{background:rgba(251,244,238,.92)}.logo{color:var(--ink)}
+nav .r{display:flex;align-items:center;gap:12px}
+nav a.cta{background:var(--tom);color:#fff}
+.burger{width:44px;height:44px;border:1px solid var(--line);background:#fff;border-radius:50%;cursor:pointer;display:grid;place-content:center;gap:5px}
+.burger i{display:block;width:18px;height:2px;background:var(--ink);border-radius:2px}
+.menu{position:fixed;inset:0;width:100%;height:100%;z-index:80;background:var(--deep);color:#fbf4ee;overflow:auto;padding:22px 0 40px;opacity:0;visibility:hidden;transform:translateY(-14px);transition:opacity .35s,transform .35s,visibility .35s}
+.menu.open{opacity:1;visibility:visible;transform:none}
+.menu .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+.menu .top b{font-family:var(--d);font-size:1.15rem}
+.xbtn{width:46px;height:46px;border-radius:50%;border:1px solid #5a4943;background:transparent;color:#fff;cursor:pointer;font-size:1.5rem;line-height:1}
+.menu ol{list-style:none;max-width:760px}
+.menu li{border-bottom:1px solid #4a3a35}
+.menu a{display:flex;gap:20px;align-items:baseline;text-decoration:none;padding:15px 0;font-family:var(--d);font-size:clamp(1.3rem,3.6vw,2rem);transition:color .2s,padding .2s}
+.menu a span{color:var(--tom);font-size:1rem;min-width:2ch}
+.menu a:hover{color:#ffb9a6;padding-left:8px}
+body.lock{overflow:hidden}
+.btn{background:var(--tom);color:#fff;box-shadow:none}
+.hero{background:radial-gradient(560px 380px at 92% 8%,#ffdccf,transparent 70%),radial-gradient(420px 300px at 0 100%,#f5e7d4,transparent 70%)}
+.kicker{color:var(--tom)}.stack div{box-shadow:0 16px 32px -22px rgba(43,31,28,.5)}.stack p{color:#5b4a45}
+.facts div,.facts div:nth-child(n){border-color:var(--ink)}
+section.alt{background:#fff}
+#problem,#money,#process{background:var(--bg)}#solution,#upkeep{background:#fff1e8}#next{background:var(--bg)}
+.num{background:var(--tom);color:#fff;border-radius:50%;width:38px;height:38px;display:grid;place-items:center;font-size:.95rem;flex:none}
+.head{align-items:center}
+.card,section:not(.alt) .card{background:#fff;border:1px solid var(--line);box-shadow:none}
+section.alt .card{background:var(--bg)}
+.grid>.card:nth-child(n){border-top:1px solid var(--line)}
+.card.t-car,.biz.t-car,.panel.t-car{background:var(--car)!important;border:1px solid #f3cdbf}
+.card.t-home,.biz.t-home,.panel.t-home{background:var(--home)!important;border:1px solid #ead2b6}
+.card.t-pow,.biz.t-pow,.panel.t-pow{background:var(--pow)!important;border:1px solid #e6b8a5}
+.card p,.card.t-car p,.card.t-home p,.card.t-pow p{color:var(--mute)}
+.biz{border-top:0;box-shadow:none}
+ul.tick li{color:#4a3732}ul.tick li::before,.t-car ul.tick li::before,.t-home ul.tick li::before,.t-pow ul.tick li::before{border-color:var(--tom)}
+.steps .card::before{background:var(--tom)}
+.tabs button[aria-selected=true]{background:var(--tom);border-color:var(--tom)}
+.tag{background:var(--tom)}
+.note{background:var(--deep);color:#f3e6df}
+.close{background:var(--deep)}.close p,.contact{color:#d9c7bf}
+.total{background:#fff;border-color:var(--tom)}.total b,.price{color:var(--tom)}.biz .price{color:var(--ink)}
+.mf{background:var(--blush);border-radius:12px;padding:10px 14px;margin:8px 0 4px;color:var(--ink)!important;font-size:1rem!important}
+.mf b{font-size:1.2rem;font-weight:800;color:var(--tom)}
+.wa{background:#2f8a5f}
+@media(max-width:600px){nav a.cta{display:none}}
+</style>
+</head>
+<body>
+<div id="loader" aria-label="Loading"><div class="ld"><div class="tiles"><span></span><span></span><span></span></div><b>EMD&amp;C Global</b><small>Preparing your website proposal</small><div class="bar"><i></i></div></div></div>
+
+<nav><div class="wrap"><a class="logo" href="#top">EMD&C Global</a><div class="r"><a class="cta" href="#next">Start your project</a><button class="burger" id="bg" aria-label="Open contents menu" aria-expanded="false"><i></i><i></i><i></i></button></div></div></nav>
+<div class="menu" id="menu" aria-hidden="true"><div class="wrap"><div class="top"><b>Contents</b><button class="xbtn" id="cl" aria-label="Close menu">&times;</button></div><ol id="ml"></ol></div></div>
+
+<header class="hero" id="top"><div class="wrap">
+<div>
+<p class="kicker">Website proposal for EMD&amp;C Global Limited</p>
+<h1>Cars, homes and power, under one trusted name online.</h1>
+<p class="lead">One website that carries your name, logo, colours and domain, and lets every customer browse your vehicles, properties and power appliances, ask for a quote and reach you on WhatsApp in seconds.</p>
+<div class="meta"><span>Prepared for<b>EMD&amp;C Global Limited</b></span><span>Prepared by<b>Justdavidtech</b></span><span>Date<b>24 November 2026</b></span></div>
+</div>
+<div class="stack" aria-hidden="true">
+<div class="s1"><h3>Car sales</h3><p>Inventory, photos, prices and test drive requests.</p></div>
+<div class="s2"><h3>Real estate</h3><p>Listings, tours, inspections and enquiries.</p></div>
+<div class="s3"><h3>Power appliances</h3><p>Generators, inverters, solar and quote requests.</p></div>
+</div></div>
+<div class="wrap facts"><div><b>3</b><span>businesses, each with its own showcase</span></div><div><b>24/7</b><span>your showroom is always open</span></div><div><b>100%</b><span>ready for phones and slow networks</span></div></div>
+</header>
+
+<section id="contents" class="alt"><div class="wrap rv">
+<div class="head"><h2>Contents</h2></div>
+<p class="sub" style="margin-left:0">What is inside this proposal.</p>
+<ol class="toc">
+<li><a href="#problem"><span>01</span>The problem</a></li><li><a href="#who"><span>02</span>Who this is for</a></li>
+<li><a href="#solution"><span>03</span>The solution</a></li><li><a href="#detail"><span>04</span>The platform in detail</a></li>
+<li><a href="#money"><span>05</span>How the website makes you money</a></li><li><a href="#scenarios"><span>06</span>Showcase scenarios</a></li>
+<li><a href="#upkeep"><span>07</span>Why a website needs upkeep</a></li><li><a href="#pricing"><span>08</span>Packages and pricing</a></li>
+<li><a href="#process"><span>09</span>Our process</a></li><li><a href="#advice"><span>10</span>Our honest recommendation</a></li>
+<li><a href="#next"><span>11</span>Next step</a></li>
+</ol></div></section>
+
+<section id="problem"><div class="wrap rv">
+<div class="head"><span class="num">01</span><h2>The problem</h2></div>
+<p class="sub">A buyer wants to know if EMD&amp;C Global can be trusted with their money. Today they call, ask around or wait for photos on WhatsApp. That is slower for them, slower for you, and it quietly costs sales every month.</p>
+<div class="grid g3">
+<div class="card"><h3>Stock cannot be seen</h3><p>Cars, properties and appliances are known only to people who already know you. Everyone else buys from whoever shows up first online.</p></div>
+<div class="card"><h3>Trust is judged before you are called</h3><p>Serious buyers look a company up before they visit. A thin or missing website can lose the sale before a conversation starts.</p></div>
+<div class="card"><h3>Every request means resending photos</h3><p>Prices, pictures and documents go out one by one on WhatsApp and email. It is slow, inconsistent and eats your team’s day.</p></div>
+<div class="card"><h3>Enquiries are not tracked</h3><p>Calls, messages and referrals arrive in different places. Leads get lost and nobody knows which business brings the best customers.</p></div>
+<div class="card"><h3>Viewings take too many calls</h3><p>Arranging a test drive, an inspection or a site visit takes several calls. Every delay is a chance for the buyer to go elsewhere.</p></div>
+<div class="card"><h3>New stock stays invisible</h3><p>Fresh arrivals and new listings prove you are active, but without a place to show them, customers assume you are quiet.</p></div>
+</div></div></section>
+
+<section id="who" class="alt"><div class="wrap rv">
+<div class="head"><span class="num">02</span><h2>Who this is for</h2></div>
+<p class="sub">This website is built around EMD&amp;C Global’s three businesses, and around the people who need to find them.</p>
+<div class="grid g4">
+<div class="card t-car"><h3>Car buyers</h3><p>Individuals, fleet buyers and resellers who want to see real stock and real prices.</p></div>
+<div class="card t-home"><h3>Home seekers and investors</h3><p>Buyers, tenants and landlords comparing properties and looking for a trustworthy agent.</p></div>
+<div class="card t-pow"><h3>Households and businesses</h3><p>People who need generators, inverters and solar kits installed and supported.</p></div>
+<div class="card"><h3>Partners and the public</h3><p>Suppliers, agents, banks and media who check a company out before they reach out.</p></div>
+</div></div></section>
+
+<section id="solution"><div class="wrap rv">
+<div class="head"><span class="num">03</span><h2>The solution</h2></div>
+<p class="sub">Four systems working together under one brand, so a customer can see your stock, check your credibility, request a quote and start a conversation without waiting for anyone to pick up the phone.</p>
+<div class="grid g4">
+<div class="card"><h3>The Company Site</h3><p>Homepage, about, leadership, credentials and contact.</p></div>
+<div class="card"><h3>The Three Showrooms</h3><p>Dedicated sections for cars, real estate and power appliances.</p></div>
+<div class="card"><h3>The Enquiry Desk</h3><p>Quote requests, viewing bookings and WhatsApp routing.</p></div>
+<div class="card"><h3>Your Control Centre</h3><p>A private dashboard for listings, enquiries and reports.</p></div>
+</div></div></section>
+
+<section id="detail" class="alt"><div class="wrap rv">
+<div class="head"><span class="num">04</span><h2>The platform in detail</h2></div>
+<p class="sub">Choose a business to see exactly what visitors get to do inside it.</p>
+<div class="tabs" role="tablist">
+<button role="tab" aria-selected="true" data-p="p1">Car sales</button><button role="tab" aria-selected="false" data-p="p2">Real estate</button><button role="tab" aria-selected="false" data-p="p3">Power appliances</button><button role="tab" aria-selected="false" data-p="p4">Company site</button>
+</div>
+<div class="panel t-car on" id="p1"><div class="cols"><ul class="tick"><li>Inventory pages with photo galleries and full specs</li><li>Filter by make, model, year, price and condition</li><li>Brand new, foreign used and Nigerian used labels</li></ul><ul class="tick"><li>Book a test drive online</li><li>Request a price or financing enquiry</li><li>Share any car to WhatsApp in one tap</li></ul></div></div>
+<div class="panel t-home" id="p2"><div class="cols"><ul class="tick"><li>Listings for sale, rent and land with photo galleries</li><li>Filter by location, price, bedrooms and type</li><li>Map view with neighbourhood details</li></ul><ul class="tick"><li>Book an inspection or virtual tour</li><li>Enquiry form that goes straight to the right agent</li><li>Document requests for titles and survey plans</li></ul></div></div>
+<div class="panel t-pow" id="p3"><div class="cols"><ul class="tick"><li>Product catalogue for generators, inverters, batteries and solar</li><li>Capacity, brand and price specifications for each item</li><li>Simple load guide to help buyers choose the right size</li></ul><ul class="tick"><li>Request a quote for supply and installation</li><li>Warranty and after sales support page</li><li>Order enquiries sent to the sales desk</li></ul></div></div>
+<div class="panel" id="p4" style="background:var(--bg);border:1px solid var(--line)"><div class="cols"><ul class="tick"><li>Professional homepage that introduces all three businesses</li><li>About page with your story, mission and values</li><li>Leadership and team section</li></ul><ul class="tick"><li>Credentials, registrations and certificates</li><li>News and updates section</li><li>Contact page with map, phone and WhatsApp</li></ul></div></div>
+<div class="note"><b>New feature: floating WhatsApp button</b>A WhatsApp button stays on screen on every page, so a customer is always one tap away from your sales team. You can see it working on this page, bottom right.</div>
+</div></section>
+
+<section id="money"><div class="wrap rv">
+<div class="head"><span class="num">05</span><h2>How the website makes you money</h2></div>
+<p class="sub">Six ways the website earns its place in your company, every day it is online.</p>
+<div class="grid g3">
+<div class="card"><h3>More qualified enquiries</h3><p>Open around the clock, and every enquiry arrives with the details your team needs.</p></div>
+<div class="card"><h3>Faster sales conversations</h3><p>Customers arrive already knowing the price, the specs and what they want to ask.</p></div>
+<div class="card"><h3>Bigger deals within reach</h3><p>Buyers judge credibility before price, and a professional site supports larger transactions.</p></div>
+<div class="card"><h3>Less admin time</h3><p>Your team stops sending the same photos and brochures by hand.</p></div>
+<div class="card"><h3>A stronger first impression</h3><p>Customers meet an organised, active company before the first call.</p></div>
+<div class="card"><h3>Smarter decisions</h3><p>Reports show which cars, properties and products get attention and which enquiries close.</p></div>
+</div></div></section>
+
+<section id="scenarios" class="alt"><div class="wrap rv">
+<div class="head"><span class="num">06</span><h2>Showcase scenarios</h2></div>
+<p class="sub">How well run companies win online, and what each lesson means for EMD&amp;C Global.</p>
+<div class="grid g2">
+<div class="card"><h3>Showing real stock builds trust</h3><p>Dealers and agents who publish real photos and prices let buyers check before they call.</p><div class="sep"></div><p><b>For EMD&amp;C Global:</b> every item gets a gallery, key facts and a clear price.</p></div>
+<div class="card"><h3>Ready answers close sales faster</h3><p>Companies that keep documents and product details organised respond to buyers in minutes, not days.</p><div class="sep"></div><p><b>For EMD&amp;C Global:</b> brochures and specifications are always one click away.</p></div>
+<div class="card"><h3>Fresh listings show you are active</h3><p>New arrivals and new properties tell customers a company is busy and trusted right now.</p><div class="sep"></div><p><b>For EMD&amp;C Global:</b> add new stock in minutes from your dashboard.</p></div>
+<div class="card"><h3>Partners check you first</h3><p>Banks, suppliers and agents look at a company’s website before they reach out.</p><div class="sep"></div><p><b>For EMD&amp;C Global:</b> a clear company story brings the right partners to you.</p></div>
+</div></div></section>
+
+<section id="upkeep"><div class="wrap rv">
+<div class="head"><span class="num">07</span><h2>Why a website needs upkeep</h2></div>
+<p class="sub">A website is not a signboard you put up once. It is closer to your head office: the doors, the lights and the reception all need someone checking on them. The monthly upkeep fee covers everything below.</p>
+<div class="grid g4">
+<div class="card"><h3>Hosting and uptime</h3><p>Fast at 2pm and at 2am, so the site is never offline when a buyer checks you.</p></div>
+<div class="card"><h3>Security patches</h3><p>Enquiries and your admin login stay protected as new risks appear.</p></div>
+<div class="card"><h3>Third party services</h3><p>WhatsApp tools, maps and forms update on their own schedule, and we keep up.</p></div>
+<div class="card"><h3>Backups and recovery</h3><p>Listings, photos and enquiries are backed up so nothing is lost.</p></div>
+</div>
+<div class="note"><b>Domain renewal and yearly brush up</b>Your domain is registered one year at a time. The first year is included in your development fee. After that, renewal with a small yearly brush up costs about ₦90,000 to ₦100,000, and keeps your website, email and brand address online and yours.</div>
+</div></section>
+
+<section id="pricing" class="alt"><div class="wrap rv">
+<div class="head"><span class="num">08</span><h2>Packages and pricing</h2></div>
+<p class="sub">If EMD&amp;C Global prefers one combined website, these are the three packages. Each includes everything in the one before it. Prices are negotiable and are starting points for discussion, not a final quote.</p>
+<div class="grid g3">
+<div class="card"><h3>Starter</h3><div class="price">₦700,000<small>one time development fee</small></div><p class="mf">Monthly maintenance: <b>₦30,000</b></p><ul class="tick"><li>Company homepage, about and leadership</li><li>A showcase page for each of the three businesses</li><li>Listing galleries with detail pages</li><li>Request a quote form</li><li>Company profile download</li><li>Contact with map and floating WhatsApp button</li><li>Control Centre, SSL and cloud hosting</li></ul></div>
+<div class="card" style="outline:2px solid var(--sea)"><span class="tag">Most popular</span><h3>Standard</h3><div class="price">₦950,000<small>one time development fee</small></div><p class="mf">Monthly maintenance: <b>₦50,000</b></p><ul class="tick"><li>Everything in Starter</li><li>Testimonials and partner logos</li><li>News and updates section</li><li>Enquiry pipeline: New, Reviewed, Viewing Booked, Won</li><li>Analytics on most viewed listings</li><li>Multi desk WhatsApp for cars, property and power</li><li>Local SEO and speed tuning</li></ul></div>
+<div class="card"><h3>Premium</h3><div class="price">₦1,500,000<small>one time development fee</small></div><p class="mf">Monthly maintenance: <b>₦100,000</b></p><ul class="tick"><li>Everything in Standard</li><li>Online booking for test drives, inspections and site visits</li><li>Document downloads library</li><li>Promotional announcement banners</li><li>Multi staff accounts with activity logs</li><li>Bi weekly optimisation for more quality enquiries</li></ul></div>
+</div></div></section>
+
+<section id="process"><div class="wrap rv">
+<div class="head"><span class="num">09</span><h2>Our process</h2></div>
+<p class="sub">Delivered in stages, and approved by you at each one.</p>
+<div class="steps">
+<div class="card"><h3>Architecture and design</h3><p>Layout, brand colours, typography and page structure.</p></div>
+<div class="card"><h3>Company and showroom pages</h3><p>Homepage, about, and the listing templates for each business.</p></div>
+<div class="card"><h3>Enquiry features</h3><p>Quote forms, bookings and WhatsApp routing, according to your package.</p></div>
+<div class="card"><h3>Control Centre</h3><p>Your dashboard, reports and team access.</p></div>
+<div class="card"><h3>Content loading</h3><p>Your first listings, photos and documents added with you.</p></div>
+<div class="card"><h3>Testing and launch</h3><p>Cross device testing, speed audit, staff training, HTTPS and backups.</p></div>
+</div>
+<div class="grid g4" style="margin-top:34px">
+<div class="card t-car"><h3>Your company story</h3><p>Profile, mission, values and leadership.</p></div>
+<div class="card t-home"><h3>Your stock</h3><p>Photos, prices, descriptions and locations.</p></div>
+<div class="card t-pow"><h3>Your credentials</h3><p>Registrations, certificates and brand partners.</p></div>
+<div class="card"><h3>Your brand and contacts</h3><p>Logo, colours, phone numbers and WhatsApp.</p></div>
+</div></div></section>
+
+<section id="advice" class="alt"><div class="wrap rv">
+<div class="head"><span class="num">10</span><h2>Our honest recommendation</h2></div>
+<p class="sub">Three businesses sell to three very different customers. A buyer shopping for a car is not the same person looking for a house or a generator. So we advise a separate website for each business, with its own focus, its own address and its own dashboard.</p>
+<div class="grid g2" style="margin-bottom:34px">
+<div class="card"><h3>Each customer finds you faster</h3><p>A focused site ranks better on Google for its own searches, and visitors are never lost in a menu of unrelated things.</p></div>
+<div class="card"><h3>Each business runs on its own</h3><p>Separate dashboards and separate staff access mean the car team never touches property listings, and a problem in one never slows another.</p></div>
+<div class="card"><h3>Each brand can grow freely</h3><p>You can sell, partner or expand any business later without untangling a shared website.</p></div>
+<div class="card"><h3>Start small, add more</h3><p>You can begin with one website and add the others when you are ready.</p></div>
+</div>
+<div class="grid g3">
+<div class="biz t-car"><h3>1. Car website</h3><div class="price">₦750,000<small>one time development fee</small></div>
+<ul class="tick"><li>Inventory pages with galleries and specs</li><li>Search and filter by make, model, year and price</li><li>Test drive booking</li><li>Price and financing enquiry form</li><li>Sold and available status tags</li><li>One tap WhatsApp sharing and floating button</li></ul>
+<h4>What the dashboard lets you do</h4><ul class="tick"><li>Add, edit and remove cars in minutes</li><li>Mark cars as sold or reserved</li><li>Read and answer every enquiry</li><li>Manage test drive bookings</li><li>See which cars get the most views</li></ul></div>
+<div class="biz t-home"><h3>2. Real estate website</h3><div class="price">₦900,000<small>one time development fee</small></div>
+<ul class="tick"><li>Listings for sale, rent and land</li><li>Filters by location, price, bedrooms and type</li><li>Map view and neighbourhood information</li><li>Inspection and virtual tour booking</li><li>Agent profiles and enquiry routing</li><li>Floating WhatsApp button</li></ul>
+<h4>What the dashboard lets you do</h4><ul class="tick"><li>Publish and update property listings</li><li>Assign enquiries to specific agents</li><li>Manage inspection schedules</li><li>Mark properties as let, sold or available</li><li>See which locations attract the most interest</li></ul></div>
+<div class="biz t-pow"><h3>3. Power appliances website</h3><div class="price">₦600,000<small>one time development fee</small></div>
+<ul class="tick"><li>Catalogue of generators, inverters, batteries and solar</li><li>Specifications, capacity and warranty details</li><li>Load guide to help choose the right size</li><li>Quote request for supply and installation</li><li>Support and service request form</li><li>Floating WhatsApp button</li></ul>
+<h4>What the dashboard lets you do</h4><ul class="tick"><li>Add products and update prices and stock</li><li>Receive and manage quote requests</li><li>Track service and support requests</li><li>Promote offers with banners</li><li>See the best selling categories</li></ul></div>
+</div>
+<div class="total"><span>All three websites together<br><small style="color:var(--mute)">Monthly upkeep is agreed per website. Domain renewal is paid yearly.</small></span><b>₦2,250,000</b></div>
+</div></section>
+
+<section id="next"><div class="wrap rv">
+<div class="close">
+<h2>Ready to put EMD&amp;C Global online?</h2>
+<p>We are available for a no obligation call to walk through every part of this proposal and answer any question you have. Every week without a professional website is a week of buyers judging you by someone else’s page.</p>
+<a class="btn" href="https://wa.me/2349039977439?text=Hello%20Justdavidtech%2C%20I%20have%20seen%20the%20EMD%26C%20Global%20proposal." target="_blank" rel="noopener">Talk to us on WhatsApp</a>
+<div class="contact"><span>Email<b>info@justdavidtech.com</b></span><span>Phone<b>09039977439</b></span><span>Website<b>justdavidtech.com</b></span></div>
+</div></div></section>
+<footer>Prepared by Justdavidtech for EMD&amp;C Global Limited, 24 November 2026</footer>
+
+<a class="wa" href="https://wa.me/2349039977439?text=Hello%20Justdavidtech%2C%20I%20have%20seen%20the%20EMD%26C%20Global%20proposal." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11 19.9L3 29l6.300-2A13 13 0 1 0 16 3zm0 2.400a10.600 10.600 0 1 1-5.600 19.600l-.4-.2-3.700 1.200 1.200-3.600-.3-.4A10.600 10.600 0 0 1 16 5.400zm-4 5.300c-.3 0-.7.100-1 .5-.4.400-1.300 1.300-1.300 3.100s1.300 3.600 1.500 3.800c.2.300 2.600 4.100 6.400 5.600 3.200 1.200 3.800 1 4.500.9.700-.1 2.200-.9 2.500-1.800.3-.9.300-1.600.2-1.800-.1-.2-.4-.3-.8-.5l-2.300-1.100c-.3-.1-.6-.2-.8.200l-1 1.200c-.2.300-.4.300-.8.100a8.700 8.700 0 0 1-4.300-3.800c-.3-.6.300-.5.900-1.700.1-.2 0-.4 0-.6l-1-2.300c-.2-.6-.5-.5-.7-.5z"/></svg><span>Chat with us</span></a>
+
+<script>
+addEventListener('load',function(){setTimeout(function(){document.getElementById('loader').classList.add('done')},2000)});
+document.querySelectorAll('.tabs button').forEach(function(b){b.addEventListener('click',function(){
+document.querySelectorAll('.tabs button').forEach(function(x){x.setAttribute('aria-selected','false')});
+b.setAttribute('aria-selected','true');
+document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('on')});
+document.getElementById(b.dataset.p).classList.add('on')})});
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.08});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+
+(function(){var m=document.getElementById('menu'),b=document.getElementById('bg'),c=document.getElementById('cl'),l=document.getElementById('ml');
+document.querySelectorAll('.toc li').forEach(function(li){l.appendChild(li.cloneNode(true))});
+function open(){m.classList.add('open');m.setAttribute('aria-hidden','false');b.setAttribute('aria-expanded','true');document.body.classList.add('lock');c.focus()}
+function close(){m.classList.remove('open');m.setAttribute('aria-hidden','true');b.setAttribute('aria-expanded','false');document.body.classList.remove('lock')}
+b.addEventListener('click',open);c.addEventListener('click',close);
+l.addEventListener('click',function(e){if(e.target.closest('a'))close()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});})();
+</script>
+</body>
+</html>
